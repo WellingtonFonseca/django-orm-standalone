@@ -1,5 +1,8 @@
 # db/models.py
 from django.db import models
+from manager import init_django
+
+init_django()
 
 
 class Model(models.Model):
@@ -10,8 +13,8 @@ class Model(models.Model):
     class Meta:
         abstract = True
 
+
 # define models here
-
-
 class User(models.Model):
-    telephone = models.CharField(blank=False, max_length=100, null=False)
+    telephone = models.CharField(blank=False, default=None, max_length=100, null=True)  # noqa: E501
+    age = models.CharField(blank=False, default=None, max_length=100, null=True)  # noqa: E501
