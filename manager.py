@@ -26,7 +26,6 @@ def init_django():
                 'PORT': '3306',
             },
         },
-        DATABASE_ROUTERS=['lab.db_routers.LabRouter', ],
         DEFAULT_AUTO_FIELD='django.db.models.BigAutoField',
 
     )
